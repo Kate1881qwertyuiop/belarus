@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array </title>
+</head>
+<body>
+<script>
+    //push() и  unshift()
+    // составить функцию для добавления вначало и конец массива элементов
+    function mixedNumbers(arr) {
+        arr.unshift('I',2,'three');
+        arr.push(7,'VIII',9);
+        return arr;
+    }
+
+    console.log(mixedNumbers(['IV', 5, 'six']));
+// pop() и shift()
+    //составить функцию  которая удаляет первый и последний элемент входного массива, а возвращает массив с удаленными элементами
+    function popShift(arr) {
+        arr.pop(); // Change this line
+        arr.shift(); // Change this line
+        return arr;
+    }
+
+    console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+
+    //splice(number, kol) - удаляет
+    // удалить все лишнии элементы массива, что сумма их была 10
+    const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+    //   1-й способ
+     arr.splice(1, 4);
+
+    //   2-й способ
+    //arr.splice(0,2);
+    //arr.splice(1,2);
+    //arr.splice(2);
+    console.log(arr);
+
+    //splice(number, kol,pushes)- удаляет и вставляет
+    const numbers = [10, 11, 12, 12, 15];
+    const startIndex = 3;
+    const amountToDelete = 1;
+
+    numbers.splice(startIndex, amountToDelete, 13, 14);
+    console.log(numbers); // [ 10, 11, 12, 13, 14, 15 ]
+
+
+    //slice - извлекает
+    //определили функцию forecast, которая принимает массив в качестве аргумента. Измените функцию, используя slice()
+    // для извлечения информации из массива аргументов и возврата нового массива, содержащего строковые элементы warmи sunny.
+    function forecast(arr) {
+        arr=arr.slice(2,4);
+        return arr;
+    }
+    console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));//['warm', 'sunny']
+</script>
+</body>
+</html>
